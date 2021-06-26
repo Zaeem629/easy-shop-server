@@ -259,7 +259,7 @@ router.get(`/get/featured/:count`, async (req, res) =>{
 // For Advance Filtering Product with Category
 
 router.get(`/`, async (req, res) =>{
-    try{
+    
     let filter = {};
     if(req.query.categories)
     {
@@ -271,9 +271,7 @@ router.get(`/`, async (req, res) =>{
         res.status(500).json({success:false})
     }
     res.status(200).send(productList);
-    }catch(error){
-        res.status(500).json({success:false})
-    }
+    
 })
 
 
